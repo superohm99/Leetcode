@@ -45,7 +45,7 @@ int* spiralOrder(int** matrix, int matrixSize, int* matrixColSize, int* returnSi
     
     if(top<=bottom){
         for(int i = right; i >= left && index < total_area; i--) {
-            //top to bottom
+            //right to left
             result[index] = matrix[bottom][i];
             index++;
         }
@@ -55,6 +55,7 @@ int* spiralOrder(int** matrix, int matrixSize, int* matrixColSize, int* returnSi
 
     if(left<=right){
         for (int i = bottom; i >= top && index < total_area; i--) {
+            //bottom to top
             result[index] = matrix[i][left];
             index++;
         }
